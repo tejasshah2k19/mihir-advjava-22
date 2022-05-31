@@ -1,0 +1,57 @@
+how to link server in eclipse :-
+file -> new -> server -> Apache -> tomcat 8.5 -> 
+now click on browse and go to path where we install tomcat 8.5
+next* -> finish 
+
+now you can check left side in navigator/package explorer you have
+servers folder, that means server is linked. 
+-----------------------------------------------------
+
+bean
+dao
+util
+controller 
+
+
+
+facebook --> login.html 
+				email / password 
+					submit
+					
+					request -> email/password
+				server --> 
+				email/password get 
+				db --> check(email,password) 
+					response
+				true -> home.html 
+				false -> login.html [with error ] 
+view:-				
+login.html
+home.html 
+
+controller:-
+	LoginController  
+	logic				
+	
+db-dao:-
+	LoginDao 
+	email,password:check 
+	true | false 
+	
+	
+MVC design pattern / Architect
+
+model [ bean / dao ] 
+view  [ webcontent ] 
+controller 	[ controller ] 
+-----------------------------------------------------
+
+now create 1 welcome.html and run 
+
+
+
+	
+	
+	
+	
+				

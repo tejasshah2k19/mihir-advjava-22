@@ -71,6 +71,13 @@ class SignupServlet  extends HttpServlet{
 } 
 
 
+-------------------------------
+
+jsp -> java server pages / java servlet pages 
+
+<% %> scriptlet --> java logic 
+<%= %> expression  -> print 
+<%!  %> declaration ->  instance variable 
 
 
 

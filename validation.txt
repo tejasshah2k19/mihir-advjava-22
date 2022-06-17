@@ -1,0 +1,28 @@
+
+we need to take name email password from user and
+once user input everything all details need to print 
+on next js - home jsp
+
+
+
+Reg.jsp 
+	input 
+	submit 
+
+when user press submit all data will send in request ->
+on server -> inside RegiServlet --> 
+
+read all data and set into request --> setAttribute()
+
+ [ validation -> set isError flag true if any data is missing other wise default isError is false ]
+ [ if user miss any input please add error message for that field and then jumbp back to reg.jsp ] 
+ [ you need to decide if we need to go home.jsp or Reg.jsp based on isError value] 
+ 
+now use RequestDispatcher to jump to the next jsp -> Home.jsp 
+
+Home.jsp-> read all data using getAttribute and print it.
+
+
+some times user does not input some data . we need to take care of that miss data. 
+so we need to perform validation but we dont want to use js. so ? 
+we are going to write this logic inside controller/ servlet , we can write this logic before jumping to next jsp 

@@ -2,12 +2,15 @@ package com.controller;
 
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.Optional;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.util.Validators;
 
 public class CalculateAgeServlet extends HttpServlet {
 
@@ -17,7 +20,7 @@ public class CalculateAgeServlet extends HttpServlet {
 		boolean isError = false;
 		String bYear = request.getParameter("birthYear");
 		// validate
-		if (bYear == null || bYear.trim().length() == 0) {
+		if (Validators.isRequired(bYear) == false) {
 			isError = true;
 			request.setAttribute("birthYearError", "Please Enter Birth Year ");
 		}

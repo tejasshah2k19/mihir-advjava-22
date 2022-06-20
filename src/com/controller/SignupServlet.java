@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.util.Validators;
+
 //1 extends HttpServlet 
 //2 override - service 
 public class SignupServlet extends HttpServlet {
@@ -22,6 +24,15 @@ public class SignupServlet extends HttpServlet {
 		System.out.println(email);
 		System.out.println(password);
 
+		
+		if(Validators.isRequired(firstName) == false) {
+			request.setAttribute("firstNameError", "Please Enter FirstName");
+		}else if(Validators.isAlpha(firstName) == false) {
+			request.setAttribute("firstNameError", "Please Enter Valid FirstName");
+		}
+		
+		
+		
 		response.setContentType("text/html");// MIME -> audio/mp3 video/mp4
 
 		PrintWriter out = response.getWriter();

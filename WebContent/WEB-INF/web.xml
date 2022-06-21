@@ -33,4 +33,27 @@
 		<servlet-name>CalculateAgeServlet</servlet-name>
 		<url-pattern>/CalculateAgeServlet</url-pattern>
 	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>VotingServlet</servlet-name>
+		<servlet-class>com.controller.VotingServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>VotingServlet</servlet-name>
+		<url-pattern>/VotingServlet</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>VotingFilter</filter-name>
+		<filter-class>com.filter.VotingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>VotingFilter</filter-name>
+		<url-pattern>/VotingServlet</url-pattern>
+		<!-- <servlet-name>VotingServlet</servlet-name> -->
+	</filter-mapping>
+
 </web-app>

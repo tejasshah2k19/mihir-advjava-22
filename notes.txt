@@ -79,6 +79,26 @@ jsp -> java server pages / java servlet pages
 <%= %> expression  -> print 
 <%!  %> declaration ->  instance variable 
 
+-------------------------------------------------
+
+
+input.jsp -> input --> submit--> servlet --> get validation --> process --> output 
+
+500 request --> 
+
+filter --> pre process { validation , authentication } 
+
+
+filter -> servlet 
+
+1) class  implements Filter 
+2) override method -- logic
+3) web.xml 
+
+
+
+
+
 
 
 

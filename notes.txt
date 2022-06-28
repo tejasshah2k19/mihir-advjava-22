@@ -95,10 +95,25 @@ filter -> servlet
 2) override method -- logic
 3) web.xml 
 
+-------------------------------------------------------------
+database -> 
+		1) oracle 
+		2) mysql#
+		3) postgres#
+		4) mongodb - nosql 
+		5) mssql 
+
+1: download driver - jar 
+2: add jar into lib and link in your project [ add jar] 
+3: connection logic 
+		3.1 : database driver load 
+		3.2 : open connection 
+		
+how to connect db ?  - logic 
 
 
-
-
+		
+---------------------------------------------------------------
 
 
 

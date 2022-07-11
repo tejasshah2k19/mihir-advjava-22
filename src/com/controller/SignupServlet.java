@@ -5,10 +5,13 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.dao.UserDao;
 import com.mysql.cj.xdevapi.PreparableStatement;
 import com.util.DbConnection;
 import com.util.Validators;
@@ -17,7 +20,7 @@ import com.util.Validators;
 //2 override - service 
 public class SignupServlet extends HttpServlet {
 
-	public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		System.out.println("SignupServlet()");
 
 		String firstName = request.getParameter("firstName");
@@ -35,20 +38,12 @@ public class SignupServlet extends HttpServlet {
 		}
 
 		// db insert
-		try {
-			Connection con = DbConnection.getConnection();
-
-			PreparedStatement pstmt = con
-					.prepareStatement("insert into users (firstName,email,password) values (?,?,?)");
-			pstmt.setString(1, firstName);
-			pstmt.setString(2, email);
-			pstmt.setString(3, password);
-			pstmt.executeUpdate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		UserDao userDao = new UserDao();
+		userDao.insertUser(firstName,email,password);
+		
 		// redirect login page
-
+		RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
+		rd.forward(request, response);
 //		response.setContentType("text/html");// MIME -> audio/mp3 video/mp4
 //
 //		PrintWriter out = response.getWriter();

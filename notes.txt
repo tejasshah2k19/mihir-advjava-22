@@ -114,9 +114,29 @@ how to connect db ?  - logic
 
 		
 ---------------------------------------------------------------
+JDBC 
 
 
+1) jar / lib --> db vendor / drivers  --> 
+					mysql
 
+
+2) Db Connection Java APp 
+	util -> DbConnection.java 
+			driver
+			url
+			userName
+			password 
+			
+	
+-----------------------------------------------------------------
+
+create table users (
+	userId integer primary key auto_increment,
+	firstName varchar(30),
+	email varchar(30),
+	password varchar(30)
+);
 
 
 

@@ -3,17 +3,18 @@ package com.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
+import com.bean.UserBean;
 import com.util.DbConnection;
 
 public class UserDao {
-	public void insertUser(String firstName, String email, String password) {
+	public void insertUser(UserBean user) {
 		try {
 			Connection con = DbConnection.getConnection();
 			PreparedStatement pstmt = con
 					.prepareStatement("insert into users (firstName,email,password) values (?,?,?)");
-			pstmt.setString(1, firstName);
-			pstmt.setString(2, email);
-			pstmt.setString(3, password);
+			pstmt.setString(1, user.getFirstName());
+			pstmt.setString(2, user.getEmail());
+			pstmt.setString(3, user.getPassword());
 			pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();

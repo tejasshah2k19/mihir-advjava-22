@@ -138,7 +138,30 @@ create table users (
 	password varchar(30)
 );
 
+-----------------------------------------------------------------
+bean --> POJO -> plain old java object 
 
+
+create table books (
+	bookId integer primary key auto_increment,
+	bookName varchar(30),
+	price integer
+);
+
+----------------------------------------
+ AddBook.jsp	
+		name
+		qty
+		price 
+
+		submit
+	
+	AddBookServlet 
+		getParameter 
+		validation 
+		bean set all variable 
+		dao -> insert 
+		redirect ListBookServlet 
 
 
 

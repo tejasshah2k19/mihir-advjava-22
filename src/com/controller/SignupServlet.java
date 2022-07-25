@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.bean.UserBean;
 import com.dao.UserDao;
 import com.mysql.cj.xdevapi.PreparableStatement;
 import com.util.DbConnection;
@@ -39,7 +40,15 @@ public class SignupServlet extends HttpServlet {
 
 		// db insert
 		UserDao userDao = new UserDao();
-		userDao.insertUser(firstName,email,password);
+		
+		//data
+		UserBean userBean = new UserBean();
+		userBean.setFirstName(firstName);
+		userBean.setEmail(email);
+		userBean.setPassword(password);
+		
+		
+		userDao.insertUser(userBean);
 		
 		// redirect login page
 		RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");

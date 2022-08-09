@@ -28,7 +28,10 @@
 			<td><%=b.getBookId() %></td>
 			<td><%=b.getBookName() %></td>
 			<td><%=b.getPrice() %></td>
-			<td><a href="DeleteBookServlet?bookId=<%=b.getBookId() %>">Delete</a></td>
+			<td>
+			<a href="DeleteBookServlet?bookId=<%=b.getBookId() %>">Delete</a> |
+			<a href="EditBookServlet?bookId=<%=b.getBookId() %>">Edit</a>
+			</td>
 		</tr>
 		<%
 			}

@@ -52,30 +52,51 @@ public class BookDao {
 		}
 		return books;
 	}
-	
+
 	public void deleteBook(int bookId) {
-	
+
 		try {
 			Connection con = DbConnection.getConnection();
 			PreparedStatement pstmt = con.prepareStatement("delete from books where bookId = ?");
 			pstmt.setInt(1, bookId);
 			pstmt.executeUpdate();
-		}catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	public BookBean getBookById(int bookId) {
+		try {
+			Connection con = DbConnection.getConnection();
+			PreparedStatement pstmt = con.prepareStatement("select * from books where bookId = ?");
+			pstmt.setInt(1, bookId);
+			ResultSet rs = pstmt.executeQuery();
+			
+			BookBean book = new BookBean();
+            rs.next();
+			book.setBookId(rs.getInt("bookId"));
+			book.setBookName(rs.getString("bookName"));
+			book.setPrice(rs.getInt("price"));
+			
+			return book;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public void updateBook(BookBean book) {
+		try {
+			Connection con = DbConnection.getConnection();
+			PreparedStatement pstmt = con.prepareStatement("update  books set bookName =? , price = ?  where bookId = ? ");
+			pstmt.setString(1, book.getBookName());
+			pstmt.setInt(2, book.getPrice());
+			pstmt.setInt(3, book.getBookId());
+			pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

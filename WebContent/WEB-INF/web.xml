@@ -56,4 +56,19 @@
 		<!-- <servlet-name>VotingServlet</servlet-name> -->
 	</filter-mapping>
 
+	<listener>
+		<listener-class>com.listener.ServerLogListener</listener-class>
+	</listener>
+
+
+
+
+
+
+
+
+
+
+
+
 </web-app>

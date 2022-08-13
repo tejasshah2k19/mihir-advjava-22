@@ -163,8 +163,48 @@ create table books (
 		dao -> insert 
 		redirect ListBookServlet 
 
+----------------------------------------
+Listener 
+gys -> listen temp
+water tank -> listen level 
 
 
+
+
+server -->	
+		listener -> always listen the events 
+
+
+listen --> server shutdown event --> close 
+       --> server start event 	--> amazon connection / nse / bse 
+
+
+nse bse --> price -> charge -> ? time ->  
+aws google server -> time:[0.02*minutes] fix:[25$]--> pay as u grow 
+
+	
+	1) listener class 
+	2) implements your required Listner interface 
+	3) override method -logic 
+	4) web.xml 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

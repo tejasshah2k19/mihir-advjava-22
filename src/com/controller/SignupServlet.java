@@ -27,7 +27,14 @@ public class SignupServlet extends HttpServlet {
 		String firstName = request.getParameter("firstName");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
+		String hobby[] = request.getParameterValues("hobby");
+		
 
+		
+		for(int i=0;i<hobby.length;i++) {
+			System.out.println(hobby[i]);
+		}
+		
 		System.out.println(firstName);
 		System.out.println(email);
 		System.out.println(password);

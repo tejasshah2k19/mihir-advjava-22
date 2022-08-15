@@ -83,7 +83,15 @@
 
 
 
+	<context-param>
+		<param-name>gemail</param-name>
+		<param-value>admin2@gmail.com</param-value>
+	</context-param>
 
+	<context-param>
+		<param-name>gpassword</param-name>
+		<param-value>admin</param-value>
+	</context-param>
 
 
 

@@ -94,7 +94,10 @@
 	</context-param>
 
 
-
+	<error-page>
+		<error-code>404</error-code>
+		<location>/Error.jsp</location>
+	</error-page>
 
 
 </web-app>

@@ -188,8 +188,17 @@ aws google server -> time:[0.02*minutes] fix:[25$]--> pay as u grow
 	3) override method -logic 
 	4) web.xml 
 	
+--------------------------------------------------------
+
+Login.jsp
+
+Welcome , Mihir 
 	
-	
+	user info---> 1) cookie [ browser ] [ client side ] 
+				  2) session [server side ] 
+				  
+				  
+				  
 	
 	
 	

@@ -198,7 +198,17 @@ Welcome , Mihir
 				  2) session [server side ] 
 				  
 				  
-				  
+cookie -> client side 
+
+	response.addCookie(c) 
+	
+	
+	request.getCookies(); 
+	
+	
+session -> server side 
+	most secure -> server memory -> we can not view it like cookie 
+	 
 	
 	
 	

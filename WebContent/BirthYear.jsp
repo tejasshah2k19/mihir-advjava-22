@@ -33,7 +33,7 @@
 		String birtYearError = (String) request.getAttribute("birthYearError");
 	%>
 	<form action="CalculateAgeServlet">
-		BirtYearh : <input type="text" name="birthYear" /><font color="red"><%=birtYearError==null?"":birtYearError%></font>
+		BirtYearh : <input type="text" name="birthYear" /><font color="red"><%=birtYearError == null ? "" : birtYearError%></font>
 		<br> <input type="submit" value="Find Age" />
 	</form>
 

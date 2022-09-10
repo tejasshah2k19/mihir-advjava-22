@@ -210,15 +210,67 @@ session -> server side
 	most secure -> server memory -> we can not view it like cookie 
 	 
 	
+----------------------------------------------------------------------------------------
+directives -> 
+	1. page
+	2. include
+	3. taglib 
+
+<%@ page %> 
+	
+
+client --> server --> response 5 mb --> 	
+
+	server --> client -> 
+	
+----------------------------------------------------------------------------------------
+reusable web component -inclusion
+
+Header.jsp
+
+Footer.jsp
+
+1: static inclusion
+2: dynamic inclusion
+	
+----------------------------------------------------------------------------------------
+HTML <bR> <b> <I> 
+	
+
+java - tag - JSTL -> 
+custom tag 	<greet>
+			<time>
+			
+			
+										JSTL 
+				
+		Core Tags	,	XML Tags , SQl TAgs , Formatting Tags	,JSTL Function Tags
+				 
+			
+			
+			coreTAgs  
+	<% for() %> 	=> 					<foreach>
+	
+	if , switch , exception , print , var 
+	
+	
+	1) jstl.jar [ download jar file, put into lib , link into lib [buildpath] ] 
+	2) jsp -> taglib include 
 	
 	
 	
+----------------------------------------------------------------------------------------
+1) simple tag 
+2) classic tag 
+
+
+1. class - logic - tag handler class 
+2. .tld ->tag lib descriptor 
+3. map this tld file in web.xml 
+4. use your tag in jsp using <%@taglib %> 
 	
-	
-	
-	
-	
-	
+<greet></greet>
+<sqr num="2"/> 	
 	
 	
 	

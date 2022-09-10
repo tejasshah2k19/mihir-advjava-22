@@ -27,3 +27,9 @@ public class ServletLifeCycleDemo extends HttpServlet {
 	}
 
 }
+
+
+//load class 
+//instance 
+//init 
+//service 

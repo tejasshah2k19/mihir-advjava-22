@@ -102,6 +102,13 @@
 	<session-config>
 		<session-timeout>3</session-timeout>
 	</session-config>
+	
+	<jsp-config>
+		<taglib>
+		<taglib-uri>stag</taglib-uri>
+		<taglib-location>/WEB-INF/stag.tld</taglib-location>
+		</taglib>
+	</jsp-config>
 
 
 </web-app>
